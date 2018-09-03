@@ -8,7 +8,7 @@ setup(
     description='Github manager analytics service',
     url='',
     license='BSD',
-    packages=find_packages(),
+    packages=['gm_analytics'],
     include_package_data=True,
     install_requires=[
         'flask==1.0.2',
