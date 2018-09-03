@@ -15,4 +15,7 @@ setup(
         'connexion==1.5.2',
         'PyGithub==1.35',
     ],
+    setup_requires=[
+        'connexion==1.5.2',
+    ],
 )
