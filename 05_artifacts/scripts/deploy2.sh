@@ -31,12 +31,14 @@ python setup.py bdist --formats=rpm
 # create rpm with specfile
 python setup.py bdist_rpm --spec-only --requires="python3"
 python setup.py bdist_rpm --spec-file=dist/gm_analytics.spec
+python setup.py bdist_rpm --post-install="scripts/postinstall.sh"
 
 #
 rpmbuild -ba ./build/bdist.linux-x86_64/rpm/SPECS/color_print.spec
 
 # Uninstall rpm
 rpm -e gm_analytics-0.1.0.dev20180902-1.noarch
+rpm -ivh gm_analytics-0.1.0.dev20180902-1.noarch
 
 
 # deploy with factory 
